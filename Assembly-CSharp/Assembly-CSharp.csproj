@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C46E483E-ADF6-4E85-AD8C-84B635503A7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Assembly-CSharp</RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Ink-Libraries">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Ink-Libraries.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Rewired_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SaveExtensions">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\SaveExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Common">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Containers">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Containers.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Input">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.PerformanceTracking">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.PerformanceTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.Achievements">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.Achievements.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.Achievements.Steam">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.Achievements.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.EngagementService">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.EngagementService.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.Entitlements">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.Entitlements.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.Entitlements.Steam">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.Entitlements.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.On">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.On.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.OnScreenKeyboard">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.OnScreenKeyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.OnScreenKeyboard.TextMeshPro">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.OnScreenKeyboard.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.SaveGame">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.SaveGame.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.SaveGame.Steam">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.SaveGame.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.User">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.User.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.User.Steam">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.User.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.UserService">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.UserService.dll</HintPath>
+    </Reference>
+    <Reference Include="Team17.Platform.UserService.Steam">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Team17.Platform.UserService.Steam.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Date Everything\Date Everything_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Achievement.cs" />
+    <Compile Include="AchievementController.cs" />
+    <Compile Include="AchievementId.cs" />
+    <Compile Include="AchievementTrigger.cs" />
+    <Compile Include="AchievementType.cs" />
+    <Compile Include="ActionOnDisable.cs" />
+    <Compile Include="ActivateParticle.cs" />
+    <Compile Include="ActivateVFX.cs" />
+    <Compile Include="ActiveStateTrigger.cs" />
+    <Compile Include="ActivityDefinition.cs" />
+    <Compile Include="AirFryer.cs" />
+    <Compile Include="AlarmClock.cs" />
+    <Compile Include="AlphaClip.cs" />
+    <Compile Include="AmbientSpace.cs" />
+    <Compile Include="Analytics.cs" />
+    <Compile Include="AnchorsToAspectRatio.cs" />
+    <Compile Include="AnimateTextColour.cs" />
+    <Compile Include="AnimateTMProFade.cs" />
+    <Compile Include="AnimateTMProGeneric.cs" />
+    <Compile Include="AnimateTMProTextTags.cs" />
+    <Compile Include="AnimateTMProVertex.cs" />
+    <Compile Include="AnimateUIScale.cs" />
+    <Compile Include="AnimationFeeder.cs" />
+    <Compile Include="AnimationRandInt.cs" />
+    <Compile Include="AnimationSetVariable.cs" />
+    <Compile Include="AnimeFigure.cs" />
+    <Compile Include="AnimEventer.cs" />
+    <Compile Include="ArtEntry.cs" />
+    <Compile Include="ArtEntryButton.cs" />
+    <Compile Include="ArtGalleryTool.cs" />
+    <Compile Include="ArtListBank.cs" />
+    <Compile Include="ArtPlayer.cs" />
+    <Compile Include="AssetCleaner.cs" />
+    <Compile Include="AssetReferenceTMP_SpriteAsset.cs" />
+    <Compile Include="Assets\Date_Everything\Scripts\SaveVersionAutoFix\SaveAutoFixManager.cs" />
+    <Compile Include="Assets\Date_Everything\Scripts\UI\Loading\LoadingFacts.cs" />
+    <Compile Include="Assets\Date_Everything\Scripts\UI\Loading\VideoPlayer.cs" />
+    <Compile Include="AtticDoorUnlocker.cs" />
+    <Compile Include="AudioManager.cs" />
+    <Compile Include="AUDIO_TYPE.cs" />
+    <Compile Include="AutoRepeat.cs" />
+    <Compile Include="AwakenSplashScreen.cs" />
+    <Compile Include="AwakenUI.cs" />
+    <Compile Include="Bed.cs" />
+    <Compile Include="BetterPlayerControl.cs" />
+    <Compile Include="BodyPart.cs" />
+    <Compile Include="BossBattleHealthBar.cs" />
+    <Compile Include="BreakerBox.cs" />
+    <Compile Include="BuildVersion.cs" />
+    <Compile Include="Cabinet.cs" />
+    <Compile Include="CamController.cs" />
+    <Compile Include="CameraEffects.cs" />
+    <Compile Include="CameraPlatformConfig.cs" />
+    <Compile Include="CameraSpaces.cs" />
+    <Compile Include="Candelabra.cs" />
+    <Compile Include="CanopyInfoUpdater.cs" />
+    <Compile Include="CanvasUIManager.cs" />
+    <Compile Include="CarCollision.cs" />
+    <Compile Include="ChangeImageSprite.cs" />
+    <Compile Include="ChangeTextColor.cs" />
+    <Compile Include="CharacterAlias.cs" />
+    <Compile Include="CharacterEntryToCollectableBoolMap.cs" />
+    <Compile Include="CharacterEntryToRoomerBoolMap.cs" />
+    <Compile Include="CharacterHelper.cs" />
+    <Compile Include="CharacterImageStorage.cs" />
+    <Compile Include="CharacterUtility.cs" />
+    <Compile Include="ChatButton.cs" />
+    <Compile Include="ChatButtonSelectedUI.cs" />
+    <Compile Include="ChatMaster.cs" />
+    <Compile Include="ChatSave.cs" />
+    <Compile Include="ChatTextBox.cs" />
+    <Compile Include="ChatType.cs" />
+    <Compile Include="ChoiceButton.cs" />
+    <Compile Include="CinematicBars.cs" />
+    <Compile Include="Clock.cs" />
+    <Compile Include="ClockManager.cs" />
+    <Compile Include="CloseOpenAnimLogic.cs" />
+    <Compile Include="ClosetRug.cs" />
+    <Compile Include="Clothes.cs" />
+    <Compile Include="CoffeeMachine.cs" />
+    <Compile Include="CollectableAnim.cs" />
+    <Compile Include="CollectableCharacterInternalName.cs" />
+    <Compile Include="CollectableLayout.cs" />
+    <Compile Include="CollectablesScreen.cs" />
+    <Compile Include="CollectableToBool.cs" />
+    <Compile Include="CollectableToImageMap.cs" />
+    <Compile Include="CollectableView.cs" />
+    <Compile Include="ColorChoice.cs" />
+    <Compile Include="command.cs" />
+    <Compile Include="CompassDirections.cs" />
+    <Compile Include="Computer.cs" />
+    <Compile Include="ComputerManager.cs" />
+    <Compile Include="ConfigurePlatformPostProcessing.cs" />
+    <Compile Include="ContinueButton.cs" />
+    <Compile Include="ControllerDisplayComponent.cs" />
+    <Compile Include="ControllerMenuUI.cs" />
+    <Compile Include="ControlsGlyphs.cs" />
+    <Compile Include="ControlsUI.cs" />
+    <Compile Include="CowberryStudios\ProjectAI\CommandAttribute.cs" />
+    <Compile Include="CowberryStudios\ProjectAI\CommandHandler.cs" />
+    <Compile Include="CowberryStudios\ProjectAI\CommandID.cs" />
+    <Compile Include="CowberryStudios\ProjectAI\Dialogue.cs" />
+    <Compile Include="CowberryStudios\ProjectAI\InkBinding.cs" />
+    <Compile Include="CowberryStudios\ProjectAI\InkCommand.cs" />
+    <Compile Include="CowberryStudios\ProjectAI\Util.cs" />
+    <Compile Include="CreditsScreen.cs" />
+    <Compile Include="CullLights.cs" />
+    <Compile Include="CursorController.cs" />
+    <Compile Include="CursorLocker.cs" />
+    <Compile Include="Curtain.cs" />
+    <Compile Include="CustomizationChoice.cs" />
+    <Compile Include="CustomStateData.cs" />
+    <Compile Include="CutsceneController.cs" />
+    <Compile Include="CutsceneSkipper.cs" />
+    <Compile Include="DaemonTrigger.cs" />
+    <Compile Include="DarknessVisibility.cs" />
+    <Compile Include="DateableEndingTool.cs" />
+    <Compile Include="DateADex.cs" />
+    <Compile Include="DateADexDebugger.cs" />
+    <Compile Include="DateADexEntry.cs" />
+    <Compile Include="Dateviators.cs" />
+    <Compile Include="Date_Everything\Animation\UI\UIAnimatorBlockHelper.cs" />
+    <Compile Include="Date_Everything\Scripts\BaseSpecsSnapshot.cs" />
+    <Compile Include="Date_Everything\Scripts\IgnoreVector3PropertiesResolver.cs" />
+    <Compile Include="Date_Everything\Scripts\Ink\InkStoryProvider.cs" />
+    <Compile Include="Date_Everything\Scripts\Interactables\NeverSelfInactive.cs" />
+    <Compile Include="Date_Everything\Scripts\ScriptableObjects\DataADexCharImageProvider.cs" />
+    <Compile Include="Date_Everything\Scripts\UI\DisableButtonIfAnySlotOperationIsActive.cs" />
+    <Compile Include="Date_Everything\Scripts\UI\InputControllerChangedOnSelectable.cs" />
+    <Compile Include="Date_Everything\Scripts\UI\WORKSPACE_AND_CANOPY\ChatMasterSelectChatButton.cs" />
+    <Compile Include="DayNightCycle.cs" />
+    <Compile Include="DayPhase.cs" />
+    <Compile Include="DebugPanel.cs" />
+    <Compile Include="DebugTools.cs" />
+    <Compile Include="debug_misc.cs" />
+    <Compile Include="debug_timeofday.cs" />
+    <Compile Include="DefaultCalendar.cs" />
+    <Compile Include="DeluxeEditionController.cs" />
+    <Compile Include="DemoMenuButton.cs" />
+    <Compile Include="DesktopTabButton.cs" />
+    <Compile Include="DexDataContainer.cs" />
+    <Compile Include="DexEntryButton.cs" />
+    <Compile Include="DexListBank.cs" />
+    <Compile Include="DexTitleFollow.cs" />
+    <Compile Include="DialogBoxBehavior.cs" />
+    <Compile Include="DialogBoxBehavior_OLD.cs" />
+    <Compile Include="DialogTextAnimator.cs" />
+    <Compile Include="DialogueButton.cs" />
+    <Compile Include="DialogueTagManager.cs" />
+    <Compile Include="Dishwasher.cs" />
+    <Compile Include="DoCodeAnimation.cs" />
+    <Compile Include="DollyCameraShot.cs" />
+    <Compile Include="Door.cs" />
+    <Compile Include="DoubleCabinet.cs" />
+    <Compile Include="DougLogic.cs" />
+    <Compile Include="DougScript.cs" />
+    <Compile Include="Dresser.cs" />
+    <Compile Include="DresserWall.cs" />
+    <Compile Include="DustBunny.cs" />
+    <Compile Include="DynamicResolution.cs" />
+    <Compile Include="EarlyBird.cs" />
+    <Compile Include="EditorTools.cs" />
+    <Compile Include="EmoteAnim.cs" />
+    <Compile Include="EmoteAnimation.cs" />
+    <Compile Include="EmoteHeight.cs" />
+    <Compile Include="EmoteReaction.cs" />
+    <Compile Include="EmoteStopper.cs" />
+    <Compile Include="EquipDateviators.cs" />
+    <Compile Include="ExamineController.cs" />
+    <Compile Include="ExteriorAnimal.cs" />
+    <Compile Include="ExteriorAnimal_AnimEvents.cs" />
+    <Compile Include="E_Facial_Expressions.cs" />
+    <Compile Include="E_General_Poses.cs" />
+    <Compile Include="FadeInOnEnable.cs" />
+    <Compile Include="Faucet.cs" />
+    <Compile Include="Faucet_AnimEvents.cs" />
+    <Compile Include="FirePlace.cs" />
+    <Compile Include="FirstPersonAnimInteraction.cs" />
+    <Compile Include="FMVBars.cs" />
+    <Compile Include="FoodObj.cs" />
+    <Compile Include="FootStep.cs" />
+    <Compile Include="FootstepMaterial.cs" />
+    <Compile Include="ForwardNavigation.cs" />
+    <Compile Include="FPSCounter.cs" />
+    <Compile Include="Fridge.cs" />
+    <Compile Include="FrontDoor.cs" />
+    <Compile Include="GameController.cs" />
+    <Compile Include="GameObjectSwitcher.cs" />
+    <Compile Include="GameSettingsProvider.cs" />
+    <Compile Include="GenericInteractable.cs" />
+    <Compile Include="GhostController.cs" />
+    <Compile Include="GraphicsSettingsProvider.cs" />
+    <Compile Include="GrassTrigger.cs" />
+    <Compile Include="GridNavigationUpdater.cs" />
+    <Compile Include="GroupFade.cs" />
+    <Compile Include="Hamper.cs" />
+    <Compile Include="Helicopter_AnimEvent.cs" />
+    <Compile Include="HideableInteractable.cs" />
+    <Compile Include="HouseReenterTrigger.cs" />
+    <Compile Include="HudCanvasManager.cs" />
+    <Compile Include="HUDScreen.cs" />
+    <Compile Include="HvacControls.cs" />
+    <Compile Include="IBurstModeImpl.cs" />
+    <Compile Include="iDuplicateEvent.cs" />
+    <Compile Include="InitControlItem.cs" />
+    <Compile Include="InitControlMenu.cs" />
+    <Compile Include="InkController.cs" />
+    <Compile Include="InkDebugger.cs" />
+    <Compile Include="InkQaFile.cs" />
+    <Compile Include="InkQaFileList.cs" />
+    <Compile Include="InkQaLine.cs" />
+    <Compile Include="InkQaStitch.cs" />
+    <Compile Include="InkVariableTool.cs" />
+    <Compile Include="InputActionBindingObject.cs" />
+    <Compile Include="InputSpriteBindingMarkupObject.cs" />
+    <Compile Include="Interactable.cs" />
+    <Compile Include="InteractableManager.cs" />
+    <Compile Include="InteractableObj.cs" />
+    <Compile Include="InteractionBlockAnimatorBehaviour.cs" />
+    <Compile Include="IPlatformService.cs" />
+    <Compile Include="IPlatformServiceImpl.cs" />
+    <Compile Include="IRateLimiter.cs" />
+    <Compile Include="IReloadHandler.cs" />
+    <Compile Include="IResetHandler.cs" />
+    <Compile Include="IroningBoard.cs" />
+    <Compile Include="ISettingsProvider.cs" />
+    <Compile Include="ISkipBootFlowImpl.cs" />
+    <Compile Include="IsSelectableRegistered.cs" />
+    <Compile Include="JerryDrawer.cs" />
+    <Compile Include="JObjectExtensions.cs" />
+    <Compile Include="JoystickScroller.cs" />
+    <Compile Include="Keepsakes.cs" />
+    <Compile Include="KillPlane.cs" />
+    <Compile Include="KnotJumpTool.cs" />
+    <Compile Include="LabeledBool.cs" />
+    <Compile Include="LightFlickerEffect.cs" />
+    <Compile Include="LightingProfile.cs" />
+    <Compile Include="LightingScenarios.cs" />
+    <Compile Include="LightingSetup.cs" />
+    <Compile Include="LightOptimizer.cs" />
+    <Compile Include="LightStates.cs" />
+    <Compile Include="Lights_Inter.cs" />
+    <Compile Include="LimitResizingWidth.cs" />
+    <Compile Include="LoadAddressableSceneOnStart.cs" />
+    <Compile Include="LoadingSceneTransitioner.cs" />
+    <Compile Include="LoadScene.cs" />
+    <Compile Include="Localisation.cs" />
+    <Compile Include="Locket.cs" />
+    <Compile Include="LocketListDisplay.cs" />
+    <Compile Include="LogoImageAnimator.cs" />
+    <Compile Include="LogUtil.cs" />
+    <Compile Include="LogUtilLogType.cs" />
+    <Compile Include="LoopedAnimStartEvent.cs" />
+    <Compile Include="LoopedSound.cs" />
+    <Compile Include="MagicalVoiceLines.cs" />
+    <Compile Include="MainMenuAmbience.cs" />
+    <Compile Include="MainMenuAnimator.cs" />
+    <Compile Include="MainMenuSubScreen.cs" />
+    <Compile Include="Makeup.cs" />
+    <Compile Include="MenuActor.cs" />
+    <Compile Include="MenuCameraFix.cs" />
+    <Compile Include="MenuComponent.cs" />
+    <Compile Include="MeshChoice.cs" />
+    <Compile Include="MessageLogItem.cs" />
+    <Compile Include="MessageLogManager.cs" />
+    <Compile Include="MessageType.cs" />
+    <Compile Include="MessyModelsTool.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Minibar.cs" />
+    <Compile Include="MirandaT17Logger.cs" />
+    <Compile Include="MirrorEnabledState.cs" />
+    <Compile Include="MorningRoutine.cs" />
+    <Compile Include="MovingDateable.cs" />
+    <Compile Include="MovingObject.cs" />
+    <Compile Include="MultiGraphicButton.cs" />
+    <Compile Include="MusicBank.cs" />
+    <Compile Include="MusicEntry.cs" />
+    <Compile Include="MusicEntryButton.cs" />
+    <Compile Include="MusicListBank.cs" />
+    <Compile Include="MusicPlayer.cs" />
+    <Compile Include="MysteriousObjects.cs" />
+    <Compile Include="NameEntrySounds.cs" />
+    <Compile Include="NameResolver.cs" />
+    <Compile Include="NameToStagePosition.cs" />
+    <Compile Include="NavigationOverride.cs" />
+    <Compile Include="NightTimeEvents.cs" />
+    <Compile Include="NullDeviceEngagementValidator.cs" />
+    <Compile Include="NullPlatformServiceImpl.cs" />
+    <Compile Include="ObjectExamine.cs" />
+    <Compile Include="ObjectMover.cs" />
+    <Compile Include="ObjectSaveData.cs" />
+    <Compile Include="ObjectSaveDataConverter.cs" />
+    <Compile Include="OffsetByRectHeight.cs" />
+    <Compile Include="OneTimeOnlyEnabler.cs" />
+    <Compile Include="OnSelectedConditionalTrigger.cs" />
+    <Compile Include="OnSelectedHandler.cs" />
+    <Compile Include="OverrideClosePhone.cs" />
+    <Compile Include="ParallelChat.cs" />
+    <Compile Include="ParsedTag.cs" />
+    <Compile Include="PauseOrFreeze.cs" />
+    <Compile Include="PauseScreen.cs" />
+    <Compile Include="PauseState.cs" />
+    <Compile Include="PerformanceRatingWidget.cs" />
+    <Compile Include="Persister.cs" />
+    <Compile Include="PhoneAppManager.cs" />
+    <Compile Include="PhoneBackgroundSwitcher.cs" />
+    <Compile Include="PhoneManager.cs" />
+    <Compile Include="Piano.cs" />
+    <Compile Include="PlanarReflection.cs" />
+    <Compile Include="PlatformService.cs" />
+    <Compile Include="PlayerNameText.cs" />
+    <Compile Include="PlayerPauser.cs" />
+    <Compile Include="PlayStationTier.cs" />
+    <Compile Include="Popup.cs" />
+    <Compile Include="PortableSave.cs" />
+    <Compile Include="PrevChoice.cs" />
+    <Compile Include="PrevPath.cs" />
+    <Compile Include="ProductDefinition.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QRCoder\Unity\UnityQRCode.cs" />
+    <Compile Include="Rat.cs" />
+    <Compile Include="RateLimiter.cs" />
+    <Compile Include="RecipeAnim.cs" />
+    <Compile Include="RecipeAnim_Events.cs" />
+    <Compile Include="RecipeBarColorTrigger.cs" />
+    <Compile Include="RecordPlayer.cs" />
+    <Compile Include="RectMatchHeight.cs" />
+    <Compile Include="RelationshipStatus.cs" />
+    <Compile Include="ReloadManager.cs" />
+    <Compile Include="RemoveOnPlatform.cs" />
+    <Compile Include="RepeatType.cs" />
+    <Compile Include="ResultSplashScreen.cs" />
+    <Compile Include="RewiredConsts\Action.cs" />
+    <Compile Include="RewiredConsts\Category.cs" />
+    <Compile Include="RewiredConsts\CustomController.cs" />
+    <Compile Include="RewiredConsts\Layout.cs" />
+    <Compile Include="RewiredConsts\LayoutManagerRuleSet.cs" />
+    <Compile Include="RewiredConsts\MapEnablerRuleSet.cs" />
+    <Compile Include="RewiredConsts\Player.cs" />
+    <Compile Include="Rewired\Demos\ControllerGlyphs.cs" />
+    <Compile Include="Rewired\Demos\KeyboardGlyphs.cs" />
+    <Compile Include="Rewired\Demos\MouseGlyphs.cs" />
+    <Compile Include="RoomerData.cs" />
+    <Compile Include="RoomerGalleryButton.cs" />
+    <Compile Include="RoomerLogItem.cs" />
+    <Compile Include="RoomerRevealAnimEvent.cs" />
+    <Compile Include="Roomers.cs" />
+    <Compile Include="RoomersButton.cs" />
+    <Compile Include="RoomersContent.cs" />
+    <Compile Include="RoomersEntry.cs" />
+    <Compile Include="RoomersEntryButton.cs" />
+    <Compile Include="RoomersInfo.cs" />
+    <Compile Include="RoomersListBank.cs" />
+    <Compile Include="RoomersTip.cs" />
+    <Compile Include="RoomerToBool.cs" />
+    <Compile Include="RotateWithMouseOrObjTarget.cs" />
+    <Compile Include="Save.cs" />
+    <Compile Include="SaveGameErrorHandler.cs" />
+    <Compile Include="SaveIndicatorController.cs" />
+    <Compile Include="SaveResult.2.cs" />
+    <Compile Include="SaveResult.cs" />
+    <Compile Include="SaveScreenManager.cs" />
+    <Compile Include="SaveSlot.cs" />
+    <Compile Include="SceneConsts.cs" />
+    <Compile Include="ScreenFader.cs" />
+    <Compile Include="ScrollingCollectableLayout.cs" />
+    <Compile Include="ScrollInView.cs" />
+    <Compile Include="ScrollOption.cs" />
+    <Compile Include="ScrollRectWheelSpeed.cs" />
+    <Compile Include="ScrollToCenterHelper.cs" />
+    <Compile Include="ScrollViewFocusFunctions.cs" />
+    <Compile Include="ScrollViewIconComponent.cs" />
+    <Compile Include="SelectButtonOnShow.cs" />
+    <Compile Include="SelfHelpButton.cs" />
+    <Compile Include="SerializableHashSet.cs" />
+    <Compile Include="SerializableHashSetBase.cs" />
+    <Compile Include="SerializableMap.2.cs" />
+    <Compile Include="SerializableMap.3.cs" />
+    <Compile Include="SerializableMap.cs" />
+    <Compile Include="SerializableMapBase.2.cs" />
+    <Compile Include="SerializableMapBase.cs" />
+    <Compile Include="SerializedDictionary.cs" />
+    <Compile Include="SerializedNameSet.cs" />
+    <Compile Include="SetMaterialFloat.cs" />
+    <Compile Include="SetTextColourOnSelect.cs" />
+    <Compile Include="SettingsMenu.cs" />
+    <Compile Include="SettingsMenuSelector.cs" />
+    <Compile Include="SettingsProvider.cs" />
+    <Compile Include="SFXBank.cs" />
+    <Compile Include="SFX_SUBGROUP.cs" />
+    <Compile Include="Shower.cs" />
+    <Compile Include="SimpleAnimController.cs" />
+    <Compile Include="SimpleSlideAnimation.cs" />
+    <Compile Include="SimpleUIParticle.cs" />
+    <Compile Include="SineOscillateScale.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SkeletonKey.cs" />
+    <Compile Include="SlidingDoor.cs" />
+    <Compile Include="Sofa.cs" />
+    <Compile Include="SpeakingCharacter.cs" />
+    <Compile Include="SpecGlossaryBlock.cs" />
+    <Compile Include="SpecsAttributes.cs" />
+    <Compile Include="SpecStatBlock.cs" />
+    <Compile Include="SpecStatMain.cs" />
+    <Compile Include="SpecStats.cs" />
+    <Compile Include="SPECS_Debugger.cs" />
+    <Compile Include="Spotlight_AnimEvents.cs" />
+    <Compile Include="Squirrel.cs" />
+    <Compile Include="SquirrelCamera.cs" />
+    <Compile Include="StageManager.cs" />
+    <Compile Include="Stat.cs" />
+    <Compile Include="SteamManager.cs" />
+    <Compile Include="SteamPlatformServiceImpl.cs" />
+    <Compile Include="SteamToggler.cs" />
+    <Compile Include="StopAllGameObjectTracksOnDestroy.cs" />
+    <Compile Include="StringToCharacterUtilityMap.cs" />
+    <Compile Include="SubInteractable.cs" />
+    <Compile Include="SwitchResizer.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="T17TextInputProxy.cs" />
+    <Compile Include="T17\Flow\ActivateGameObjectElement.cs" />
+    <Compile Include="T17\Flow\AnimatorElement.cs" />
+    <Compile Include="T17\Flow\CanvasElement.cs" />
+    <Compile Include="T17\Flow\Engagement.cs" />
+    <Compile Include="T17\Flow\FlowEnforcer.cs" />
+    <Compile Include="T17\Flow\IdentElement.cs" />
+    <Compile Include="T17\Flow\IdentManager.cs" />
+    <Compile Include="T17\Flow\LoadSceneElement.cs" />
+    <Compile Include="T17\Flow\SceneTransitionManager.cs" />
+    <Compile Include="T17\Flow\Tasks\BaseGameTask.cs" />
+    <Compile Include="T17\Flow\Tasks\IGameTask.cs" />
+    <Compile Include="T17\Flow\Tasks\LoadSaveSlotMetadataTask.cs" />
+    <Compile Include="T17\Flow\Tasks\LoadSettingsTask.cs" />
+    <Compile Include="T17\Flow\Tasks\TaskResult.cs" />
+    <Compile Include="T17\Flow\Tasks\TaskStatus.cs" />
+    <Compile Include="T17\Flow\VideoElement.cs" />
+    <Compile Include="T17\Input\RewiredDeviceIDProviderNull.cs" />
+    <Compile Include="T17\Services\RewiredInputUserService.cs" />
+    <Compile Include="T17\Services\Services.cs" />
+    <Compile Include="T17\UI\CancelButtonTrigger.cs" />
+    <Compile Include="T17\UI\SelectOnEnabled.cs" />
+    <Compile Include="T17\UI\UIDialog.cs" />
+    <Compile Include="T17\UI\UIDialogButton.cs" />
+    <Compile Include="T17\UI\UIDialogManager.cs" />
+    <Compile Include="T17\Util\DontDestroyOnLoadComponent.cs" />
+    <Compile Include="T17\Util\InstantiatePrefab.cs" />
+    <Compile Include="T17_SSAORenderFeature.cs" />
+    <Compile Include="Tab.cs" />
+    <Compile Include="TalkingUI.cs" />
+    <Compile Include="Team17\AppIdDefinition.cs" />
+    <Compile Include="Team17\Input\ControllerRumble.cs" />
+    <Compile Include="Team17\Input\IControllerDeviceRumbleHandler.cs" />
+    <Compile Include="Team17\Input\RewiredEngagedControllerRumbleHandler.cs" />
+    <Compile Include="Team17\Input\RumbleProfile.cs" />
+    <Compile Include="Team17\Input\RumbleProfileData.cs" />
+    <Compile Include="Team17\Input\Unity\ControllerRumbleService.cs" />
+    <Compile Include="Team17\Input\Unity\IControllerRumbleService.cs" />
+    <Compile Include="Team17\Scripts\AchievementConstants.cs" />
+    <Compile Include="Team17\Scripts\BaseCollectableStatsProgressiveAchievement.cs" />
+    <Compile Include="Team17\Scripts\BaseStatsProgressiveAchievement.cs" />
+    <Compile Include="Team17\Scripts\CollectionCompleteStatsProgressiveAchievement.cs" />
+    <Compile Include="Team17\Scripts\Input\IPostEngagementService.cs" />
+    <Compile Include="Team17\Scripts\Input\LostActiveUserHandler.cs" />
+    <Compile Include="Team17\Scripts\Input\LostLastActiveControllerHandler.cs" />
+    <Compile Include="Team17\Scripts\Input\PlatformButtonLayout\IUIInputService.cs" />
+    <Compile Include="Team17\Scripts\Input\PlatformButtonLayout\UIInputService.cs" />
+    <Compile Include="Team17\Scripts\Input\PostEngagementService.cs" />
+    <Compile Include="Team17\Scripts\Input\Rumble\ControllerRumbleFactory.cs" />
+    <Compile Include="Team17\Scripts\Input\Rumble\IControllerRumbleFactory.cs" />
+    <Compile Include="Team17\Scripts\IReadOnlyStatsData.cs" />
+    <Compile Include="Team17\Scripts\IStatsSaveProvider.cs" />
+    <Compile Include="Team17\Scripts\IStatsService.cs" />
+    <Compile Include="Team17\Scripts\ItllBeWorthSomethingSomedayStatsProgressiveAchievement.cs" />
+    <Compile Include="Team17\Scripts\LoreThanYouBargainingForStatsProgressiveAchievement.cs" />
+    <Compile Include="Team17\Scripts\MirandaStatsService.cs" />
+    <Compile Include="Team17\Scripts\NotEditableAttribute.cs" />
+    <Compile Include="Team17\Scripts\Platforms\Enums\EPlatformFlags.cs" />
+    <Compile Include="Team17\Scripts\Platforms\Enums\GraphicsQualityLevel.cs" />
+    <Compile Include="Team17\Scripts\Services\ApplicationStatus\ApplicationStatusPlatformService.cs" />
+    <Compile Include="Team17\Scripts\Services\ApplicationStatus\EApplicationStatus.cs" />
+    <Compile Include="Team17\Scripts\Services\ApplicationStatus\EntitlementsRefreshOnResumeService.cs" />
+    <Compile Include="Team17\Scripts\Services\ApplicationStatus\IApplicationStatusPlatformService.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\AddressableAssetLoader.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\AssetProviderExtensions.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\AssetProviderService.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\DebugAssetProviderServiceDecorator.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\EmptyResourceToAddressableProvider.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\IAddressableAssetLoader.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\IAssetProviderService.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\IResourceAssetLoader.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\IResourceToAddressableProvider.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\PlayerLoopSystemInserter.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\ResourceAssetLoader.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\ResourceToAddressableOverrideProvider.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\TimedResourceUnloader.cs" />
+    <Compile Include="Team17\Scripts\Services\AssetProvider\UnityObjectReferenceCounter.cs" />
+    <Compile Include="Team17\Scripts\Services\AutoEngagingDeviceService.cs" />
+    <Compile Include="Team17\Scripts\Services\DebugUIService.cs" />
+    <Compile Include="Team17\Scripts\Services\DefaultMaxSaveSlotsProvider.cs" />
+    <Compile Include="Team17\Scripts\Services\EnsureIsBackupEventSystem.cs" />
+    <Compile Include="Team17\Scripts\Services\Entitlement\IMirandaEntitlementService.cs" />
+    <Compile Include="Team17\Scripts\Services\Entitlement\MirandaEntitlementService.cs" />
+    <Compile Include="Team17\Scripts\Services\ForceSupportedScreenResolutionService.cs" />
+    <Compile Include="Team17\Scripts\Services\GameSuspendService.cs" />
+    <Compile Include="Team17\Scripts\Services\IAutoEngagingDeviceService.cs" />
+    <Compile Include="Team17\Scripts\Services\IGameSuspendService.cs" />
+    <Compile Include="Team17\Scripts\Services\IInternalInputMapsService.cs" />
+    <Compile Include="Team17\Scripts\Services\IMaxSaveSlotsProvider.cs" />
+    <Compile Include="Team17\Scripts\Services\Input\IMirandaInputService.cs" />
+    <Compile Include="Team17\Scripts\Services\Input\InputModeHandle.cs" />
+    <Compile Include="Team17\Scripts\Services\Input\InputModeState.cs" />
+    <Compile Include="Team17\Scripts\Services\Input\MirandaInputService.cs" />
+    <Compile Include="Team17\Scripts\Services\InternalInputMapsService.cs" />
+    <Compile Include="Team17\Scripts\Services\Suspend\UnityApplicationFocusListenerService.cs" />
+    <Compile Include="Team17\Scripts\StatsData.cs" />
+    <Compile Include="Team17\Scripts\StatsDataProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ActivateOnScrollBarVisisbleActiviationProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ArtAppPageIndicatorProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\BaseFindSelectableProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ChangeImageOnSelfSelected.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\CircularListPageIndicatorProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\CloseButtonGlyphComponent.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ControllerButtonComponent.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ControllerGlyphComponent.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ControllerMapState.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\CycleBlockerComponent.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\DateADexEntryJoystickActivationProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\DebugUI.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\DisallowConfirmPressOnController.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\DisallowControllerNavigationComponent.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\DisplaySettingsMenuSelector.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\DynamicNavigationOverride.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\IJoystickActivationProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\IScrollListPageIndicatorProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\LastActiveDateADexEntrySelectableProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\PressOnControllerSelectComponent.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\QuickResponseButton.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\QuickResponseService.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ResolutionProviderService.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ResolutionSettingsMenuSelector.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\RoomersFilterNameUpdaterButtonComponent.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\RoomersJoystickActivationProvider.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ScrollListPageIndicator.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\ScrollListPageIndicatorDot.cs" />
+    <Compile Include="Team17\Scripts\UI_Components\SpecsScreenControllerGlyphButton.cs" />
+    <Compile Include="Team17\Scripts\UniqueId.cs" />
+    <Compile Include="Team17\Services\Activities\ActivitiesService.cs" />
+    <Compile Include="Team17\Services\Activities\ActivityOutcome.cs" />
+    <Compile Include="Team17\Services\Activities\ActivityRequestedEvent.cs" />
+    <Compile Include="Team17\Services\Activities\ActivityResult.cs" />
+    <Compile Include="Team17\Services\Activities\IActivitesServiceImpl.cs" />
+    <Compile Include="Team17\Services\Activities\NullActivitiesImpl.cs" />
+    <Compile Include="Team17\Services\IconTextMarkupService.cs" />
+    <Compile Include="Team17\Services\IIconTextMarkupService.cs" />
+    <Compile Include="Team17\Services\Save\CombinedSaveSlotsContainer.cs" />
+    <Compile Include="Team17\Services\Save\CombinedSegmentData.cs" />
+    <Compile Include="Team17\Services\Save\FastListByteStream.cs" />
+    <Compile Include="Team17\Services\Save\GameplaySegment.cs" />
+    <Compile Include="Team17\Services\Save\GraphicsSettingsSegment.cs" />
+    <Compile Include="Team17\Services\Save\IMirandaSaveGameService.cs" />
+    <Compile Include="Team17\Services\Save\JsonSegment.cs" />
+    <Compile Include="Team17\Services\Save\MetadataSegment.cs" />
+    <Compile Include="Team17\Services\Save\MirandaSaveGameService.cs" />
+    <Compile Include="Team17\Services\Save\NewCombinedSegmentData.cs" />
+    <Compile Include="Team17\Services\Save\RegisteredSegment.cs" />
+    <Compile Include="Team17\Services\Save\SaveMetaDataFactory\ISaveMetaDataFactory.cs" />
+    <Compile Include="Team17\Services\Save\SaveMetaDataFactory\SaveMetaDataFactory.cs" />
+    <Compile Include="Team17\Services\Save\SaveMetaDataFactory\SteamSaveMetaDataFactory.cs" />
+    <Compile Include="Team17\Services\Save\SaveMetadataInfo.cs" />
+    <Compile Include="Team17\Services\Save\SaveSlotMetadata.cs" />
+    <Compile Include="Team17\Services\Save\SaveSlotMetadataProvider.cs" />
+    <Compile Include="Team17\Services\Save\SettingsSegment.cs" />
+    <Compile Include="Teleporter.cs" />
+    <Compile Include="Teleporter_AnimEvents.cs" />
+    <Compile Include="TestCharacterBounce.cs" />
+    <Compile Include="TextLanguage.cs" />
+    <Compile Include="TextMeshProWaveEffect.cs" />
+    <Compile Include="TextMeshPro_T17.cs" />
+    <Compile Include="TextureChoice.cs" />
+    <Compile Include="Timebar.cs" />
+    <Compile Include="TimebarTimeIcon.cs" />
+    <Compile Include="TimedSetActiveState.cs" />
+    <Compile Include="TMPro\CalendarValidator.cs" />
+    <Compile Include="TMP_Add_Tag.cs" />
+    <Compile Include="ToggleCharacter.cs" />
+    <Compile Include="Toilet.cs" />
+    <Compile Include="TransformMatchPosition.cs" />
+    <Compile Include="TransformMatchRotation.cs" />
+    <Compile Include="TransformMatchScale.cs" />
+    <Compile Include="Trapdoor.cs" />
+    <Compile Include="Trapdoor_AnimEvents.cs" />
+    <Compile Include="TreadmillAnimationController.cs" />
+    <Compile Include="Tresta_Inter.cs" />
+    <Compile Include="TriggerChildrenDOCodeAnimations.cs" />
+    <Compile Include="triggerzone.cs" />
+    <Compile Include="Tutorial.cs" />
+    <Compile Include="TutorialController.cs" />
+    <Compile Include="TutorialDrone.cs" />
+    <Compile Include="TutorialThreshold.cs" />
+    <Compile Include="TutorialTriggerZone.cs" />
+    <Compile Include="UIButtonAnimation.cs" />
+    <Compile Include="UIButtonSoundEvent.cs" />
+    <Compile Include="UIFocusPriority.cs" />
+    <Compile Include="UIInteractTagBehavior.cs" />
+    <Compile Include="UIRectFollowWorldElement.cs" />
+    <Compile Include="UIRectResizer.cs" />
+    <Compile Include="UISpeaker.cs" />
+    <Compile Include="UIUtilities.cs" />
+    <Compile Include="UnitySourceGeneratedAssemblyMonoScriptTypes_v1.cs" />
+    <Compile Include="UserIdDisplayer.cs" />
+    <Compile Include="UtilDoorState.cs" />
+    <Compile Include="UVScroller.cs" />
+    <Compile Include="ValidateQuestions.cs" />
+    <Compile Include="Vector3Converter.cs" />
+    <Compile Include="VectorExtensions.cs" />
+    <Compile Include="VFXEvents.cs" />
+    <Compile Include="VIEW_STATE.cs" />
+    <Compile Include="VoiceLanguage.cs" />
+    <Compile Include="VoiceOverCharacter.cs" />
+    <Compile Include="WallaceWall.cs" />
+    <Compile Include="WashfordDrysdale.cs" />
+    <Compile Include="WateringCan_AnimEvents.cs" />
+    <Compile Include="WorkspaceChannelButtonStyle.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

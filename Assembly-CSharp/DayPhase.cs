@@ -1,0 +1,24 @@
+﻿using System;
+
+// Token: 0x02000043 RID: 67
+public enum DayPhase
+{
+	// Token: 0x0400028E RID: 654
+	MORNING,
+	// Token: 0x0400028F RID: 655
+	NOON,
+	// Token: 0x04000290 RID: 656
+	AFTERNOON,
+	// Token: 0x04000291 RID: 657
+	EVENING,
+	// Token: 0x04000292 RID: 658
+	NIGHT,
+	// Token: 0x04000293 RID: 659
+	MIDNIGHT,
+	// Token: 0x04000294 RID: 660
+	OPENING,
+	// Token: 0x04000295 RID: 661
+	OPENING_EVENING,
+	// Token: 0x04000296 RID: 662
+	OPENING_NIGHT
+}
